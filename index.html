@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script defer src="app.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <section class="top-temp-display animate__animated animate__fadeIn">
+            <div class="bg-overlay">
+                <div>
+                    <p class="location-city">Karachi</p>
+                    <h1 class="temperature">31°</h1>
+                </div>
+                <div class="weather-main-display-info">
+                    <img id="weather-image" src="assets/weather-few-clouds.png" alt="">
+                    <h1 class="weather">Mostly Cloudy</h1>
+                </div>
+            </div>
+        </section>
+        <section class="search-section animate__animated animate__fadeIn">
+            <input id="search-bar" type="text" class="search-bar" placeholder="Search your location">
+            <img onclick="getAndShowUserCityWeather()" src="assets/search-icon.png" alt="">
+        </section>
+        <section class="extra-info animate__animated animate__fadeIn">
+            <div>
+                <img src="assets/humidity-icon.png" alt="">
+                <h1>Humidity</h1>
+            </div>
+            <div>
+                <h1 id="humidity">45%</h1>
+            </div>
+        </section>
+        <section class="extra-info animate__animated animate__fadeIn">
+            <div>
+                <img src="assets/wind-icon.png" alt="">
+                <h1>Wind</h1>
+            </div>
+            <div>
+                <h1 id="wind">5.2km/h</h1>
+            </div>
+        </section>
+        <section class="extra-info animate__animated animate__fadeIn">
+            <div>
+                <img src="assets/clouds-info-icon.png" alt="">
+                <h1>Clouds</h1>
+            </div>
+            <div>
+                <h1 id="clouds">75%</h1>
+            </div>
+        </section>
+
+        <div class="loader">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
+    </main>
+</body>
+
+</html>
